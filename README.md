@@ -73,16 +73,56 @@ Our fuzzy logic controller (FLC) has two outputs:
 </ul>
 
 
+<h3>Right Wheel Speed</h3>
+
+The figure below illustrates the configuration used for the right wheel speed output:
+<ul>
+  <li>The universe of discourse ranges from -40 to 40.</li>
+  <li>Five membership functions are chosen: four trapezoidal functions - two at the extremes to cover the universe of discourse, two representing small and large speeds, and one triangular function.</li>
+  <li>The first trapezoidal function has the following parameters: [-40 -40 -40 -39], representing the range of right wheel speed where it is very small.</li>
+  <li>The second trapezoidal function has the following parameters: [-37.6 -35.2 -33.5 -33.3], representing the range of right wheel speed where it is small.</li>
+  <li>The triangular function represents the range of right wheel speed where it is zero and is characterized by the following parameters: [-0.2 0 0.2].</li>
+  <li>The third trapezoidal function has the following parameters: [33.3 33.5 35.2 37.6], representing the range of right wheel speed where it is large.</li>
+    <li>The fourth trapezoidal function has the following parameters: [38 40 40 40], representing the range of right wheel speed where it is very large.
+</li>
+    <li>As you can see, the intersection between the functions does not exceed 25 percent of the range of each function.
+</li>
+
+
+</ul>
+<p align="center">
+  <img src="vd.png"   br>
+</p>
 
 
 
+<h3>Left Wheel Speed </h3>
 
 
+The figure below explains the configuration for the left wheel speed output:
+<ul>
+  <li>The universe of discourse ranges from -40 to 40.</li>
+    <li>Five membership functions are chosen: four trapezoidal functions - two at the extremes to cover the universe of discourse, two representing small and large speeds, and one triangular function.
+</li>
+  <li>The first trapezoidal function has the following parameters: [-40 -40 -40 -39], representing the range of left wheel speed where it is very small.
+</li>
+  <li>The second trapezoidal function has the following parameters: [-37.6 -35.2 -33.5 -33.3], representing the range of left wheel speed where it is small.
+</li>
+  <li>The triangular function represents the range of left wheel speed where it is zero and is characterized by the following parameters: [-0.2 0 0.2].
+</li>
+  <li>The third trapezoidal function has the following parameters: [33.3 33.5 35.2 37.6], representing the range of left wheel speed where it is large.
+</li>
+<li>The fourth trapezoidal function has the following parameters: [38 40 40 40], representing the range of left wheel speed where it is very large.
+</li>
+  <li>As you can see, the intersection between the functions does not exceed 25 percent of the range of each function.
+</li>
+</ul>
 
 
-
-
-
+</ul>
+<p align="center">
+  <img src="vg.png"   br>
+</p>
 
 
 
