@@ -124,6 +124,38 @@ The figure below explains the configuration for the left wheel speed output:
   <img src="vg.png"   br>
 </p>
 
+<h2>Fuzzy controllers of the Mamdani type</h2>
+
+<h3>Definition</h3>
+
+In linguistic models, also known as Mamdani-type fuzzy models, the antecedents and consequences of the rules are fuzzy propositions. The general form of Mamdani rules is as follows:
+
+A Mamdani-type fuzzy system is based on a collection of rules of the form: Where
+<ul>
+  <li> xi represents the input variables of the controller.</li>
+  <li> U is the output variable of the controllers.</li>
+  <li> Fi represents the fuzzy subsets.</li>
+<li>Generally, Mamdani-type fuzzy controllers have two inputs: the error and its rate of change, and one output, representing the rate of change of the control.</li>
+  
+</ul>
+<h3>Explanation of Our Case</h3>
+
+Based on the following figure to explain the work done: [Please provide the figure for further explanation.
+The logic we followed was to use 5 rules instead of 27 rules, with these five rules covering all possible cases of robot movement. We approached this in two ways:
+
+Orientation-Based Approach: Initially, we determine the orientation angle, and then we specify the speeds. This approach resulted in two possible robot movements: one in the positive direction of the reference if the angle is positive and the other in the opposite direction if it's negative. However, both movements vary based on the angle, meaning the robot's trajectory is inclined.
+
+Error-Based Approach: The second approach is to disregard Theta and focus on the error in XY. This approach gave us three cases:
+<ul>
+  <li>If the error is small, the robot's speeds are high.</li>
+    <li>If the error is medium, the robot's speeds are moderate.</li>
+  <li>If the error is large, the robot's speeds are zero.</li>
+
+</ul>
+
+
+
+
 
 
 
